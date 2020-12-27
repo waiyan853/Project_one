@@ -1,0 +1,83 @@
+{% extends 'base.html' %} {% block title%}TimeTable {% endblock %} {% block body%}
+<button id='btn' class="fixed btn btn-success top-5 right-5">Show Time-Table</button>
+
+<div class='flex h-screen'>
+    <div id='showHide' class='px-24 m-auto'>
+        <h1 class='text-5xl italic font-medium text-center text-green-600 animate-bounce'>Time Table</h1>
+        <table class="table mt-10 text-center border-4 table-fixed table-bordered border-primary bg-gradient-to-br from-green-300 via-green-600 to-orange-500 ">
+            <thead>
+                <tr>
+                    <th class='border-3 border-primary'></th>
+                    <th class='border-3 border-primary'>1</th>
+                    <th class='border-3 border-primary'>2</th>
+                    <th class='border-3 border-primary'>3</th>
+                    <th class='border-3 border-primary'>4</th>
+                    <th class='border-3 border-primary'>5</th>
+                    <th class='border-3 border-primary'>6</th>
+                    <th class='border-3 border-primary'>7</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class='border-3 border-primary'>MON</td>
+                    <td class='border-3 border-primary'>{{subData[0][0]}}</td>
+                    <td class='border-3 border-primary'>{{subData[0][1]}}</td>
+                    <td class='border-3 border-primary'>{{subData[0][2]}}</td>
+                    <td class='border-3 border-primary'>{{subData[0][3]}}</td>
+                    <td class='border-3 border-primary'>{{subData[0][4]}}</td>
+                    <td class='border-3 border-primary'>{{subData[0][5]}}</td>
+                    <td class='border-3 border-primary'>{{subData[0][6]}}</td>
+                </tr>
+                <tr>
+                    <td class='border-3 border-primary'>TUE</td>
+                    <td class='border-3 border-primary'>@twitter</td>
+                    <td class='border-3 border-primary'>Otto</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                    <td class='border-3 border-primary'>@twitter</td>
+                    <td class='border-3 border-primary'>Otto</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                </tr>
+                <tr>
+                    <td class='border-3 border-primary'>WED</td>
+                    <td class='border-3 border-primary'>@twitter</td>
+                    <td class='border-3 border-primary'>Otto</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                    <td class='border-3 border-primary'>@twitter</td>
+                    <td class='border-3 border-primary'>Otto</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                </tr>
+                <tr>
+                    <td class='border-3 border-primary'>THU</td>
+                    <td class='border-3 border-primary'>@twitter</td>
+                    <td class='border-3 border-primary'>Otto</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                    <td class='border-3 border-primary'>@twitter</td>
+                    <td class='border-3 border-primary'>Otto</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                </tr>
+                <tr>
+                    <td class='border-3 border-primary'>FRI</td>
+                    <td class='border-3 border-primary'>@twitter</td>
+                    <td class='border-3 border-primary'>Otto</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                    <td class='border-3 border-primary'>@twitter</td>
+                    <td class='border-3 border-primary'>Otto</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                    <td class='border-3 border-primary'>@mdo</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js'>
+</script>
+<script>
+    $('#btn').click(function() {
+        $('#showHide').fadeToggle(1000);
+    })
+</script>
+{% endblock %}
